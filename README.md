@@ -19,3 +19,31 @@ Let’s say you have two ads:
 2.   A 2.00$ ad with a 1% probability of being clicked
 
 Which one would provide the most revenue? The expected revenue (cost * click-probability) for the first ad is higher than that of the second one, even though its dollar-cost is lower, because there is a higher chance that the user will click the first ad. In other words, we can look at the problem of maximizing revenue in terms of accurately predicting the probability that a given ad will be clicked i.e. “click-through rate” (CTR).
+
+
+**File descriptions**
+
+
+*   train - Training set. 10 days of click-through data, ordered chronologically. Non-clicks and clicks are subsampled according to different strategies.
+*   test - Test set. 1 day of ads to for testing your model predictions.
+*   sampleSubmission.csv - Sample submission file in the correct format, corresponds to the All-0.5 Benchmark.
+
+
+**Data fields**
+*   id: ad identifier
+*   click: 0/1 for non-click/click
+*   hour: format is YYMMDDHH, so 14091123 means 23:00 on Sept. 11, 2014 UTC.
+*   C1 -- anonymized categorical variable
+*   banner_pos
+*   site_id
+*   site_domain
+*   site_category
+*   app_id
+*   app_domain
+*   app_category
+*   device_id
+*   device_ip
+*   device_model
+*   device_type
+*   device_conn_type
+*   C14-C21 -- anonymized categorical variables
